@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Stats preview card component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+    :root{
+      --very-dark-blue: hsl(233, 47%, 7%);
+      --dark-blue: hsl(244, 38%, 16%);
+      --soft-violet: hsl(277, 64%, 61%);
+      --white: hsl(0, 0%, 100%);
+      --slightly-white-1: hsla(0, 0%, 100%, 0.75); 
+      --slightly-white-2: hsla(0, 0%, 100%, 0.6); 
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      display: grid;
+      place-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--very-dark-blue);
+    }
+    .wrapper-container{
+      display: flex;
+    }
+    .left-container{
+      width: 50%;
+      background-color: var(--dark-blue);
+      color: var(--white);
+      padding: 4rem;
+      border-radius: .5rem 0 0 .5rem;
+    }
+    .header-title{
+      font-weight: 700;
+      font-size: 2.25rem;
+    }
+    .special{
+      color: var(--soft-violet);
+    }
+    .container-disc{
+      font-family: 'Lexend Deca', sans-serif;
+      padding-top: 2rem;
+      padding-right: 2rem;
+      line-height: 1.8;
+      color: var(--slightly-white-1);
+    }
+    .container-arch{
+      padding-top: 4rem;
+      padding-right: 4rem;
+      text-transform: uppercase;
+    }
+    .arch{
+      display: inline-block;
+      padding-right: 2rem;
+    }
+    .arch .arch-point{
+      font-family: Inter, sans-serif;
+    }
+    .arch .arch-title{
+      font-family: 'Lexend Deca', sans-serif;
+      padding-top: .5rem;
+      color: var(--slightly-white-2);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    .right-container{
+      width: 50%;
+      background-image: url(./images/image-header-desktop.jpg);
+      background-size: cover;
+      background-blend-mode: multiply;
+      background-color: var(--soft-violet);
+      position: relative;
+      border-radius: 0 .5rem .5rem 0;
+    }
+    @media (max-width: 1024px){
+      body{
+        padding: 1rem;
+        height: auto;
+      }
+      .wrapper-container{
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .left-container{
+        width: 100%;
+        padding: 2rem;
+        border-radius: 0 0 .5rem .5rem;
+      }
+      .header-title{
+        font-size: 2rem;
+      }
+      .container-disc{
+        padding-top: 1rem;
+        padding-right: 0;
+      }
+      .container-arch{
+        padding-top: 2rem;
+        padding-right: 0;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .container-arch .arch{
+        display: block;
+        padding-right: 0;
+        padding-top: 2rem;
+      }
+      .container-arch .arch:first-child{
+        padding-top: 0;
+      }
+      .right-container{
+        width: 100%;
+        height: 300px;
+        background-image: url(./images/image-header-mobile.jpg);
+        border-radius: .5rem .5rem 0 0;
+      }  
+    }
+    .attribution { 
+      color:#fff;
+      font-size: 11px; 
+      text-align: center; 
+      position: absolute;
+      bottom: 1rem;
+      left: 2rem;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper-container">
+    <div class="left-container">
+      <div class="container-header">
+        <h1 class="header-title">Get <span class="special">insights</span> that help your business grow.</h1>
+      </div>
+      <p class="container-disc">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.</p>
+      <div class="container-arch">
+        <div class="arch">
+          <h2 class="arch-point">10k+</h2>
+          <p class="arch-title">companies</p> 
+        </div>
+        <div class="arch">
+          <h2 class="arch-point">314</h2>
+          <p class="arch-title">templates</p>
+        </div>
+        <div class="arch">
+          <h2 class="arch-point">12m+</h2>
+          <p class="arch-title">queries</p>
+        </div>
+      </div>
+    </div>
+    <div class="right-container"></div>
+    
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/solutions/html-sass-G1i6qrun_" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://mahendhiranm.github.io/preview-card-component-html-css/">Mahendhiran</a>.
+  </div>
+</body>
+</html>
